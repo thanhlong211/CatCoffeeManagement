@@ -1,0 +1,199 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CoffeeCatRazporPage
+build_property.RootNamespace = CoffeeCatRazporPage
+build_property.ProjectDir = D:\PRN221\CoffeeCat\prn-coffee-cat\CoffeeCat\CoffeeCatRazporPage\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\PRN221\CoffeeCat\prn-coffee-cat\CoffeeCat\CoffeeCatRazporPage
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Admin/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Admin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Auth/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxTaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Customer/BookingForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcQm9va2luZ0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Customer/BookingHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcQm9va2luZ0hpc3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Customer/BookingMenuItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcQm9va2luZ01lbnVJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Customer/BookingSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcQm9va2luZ1N1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Customer/BookingTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcQm9va2luZ1RhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Customer/CustomerHomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcQ3VzdG9tZXJIb21lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Customer/DetailArea.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcRGV0YWlsQXJlYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Customer/DetailCat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcRGV0YWlsQ2F0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Customer/DetailMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcRGV0YWlsTWVudS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Customer/DetailTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcRGV0YWlsVGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Error/403.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3JcNDAzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Error/404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3JcNDA0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Home/ShopOwner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxTaG9wT3duZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Home/UserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVxVc2VyUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Shared/Components/Pager/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXENvbXBvbmVudHNcUGFnZXJcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/AreaManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXEFyZWFNYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/Catmanager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXENhdG1hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/CreateArea.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXENyZWF0ZUFyZWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/CreateCat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXENyZWF0ZUNhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/CreateItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXENyZWF0ZUl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/CreateStaff.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXENyZWF0ZVN0YWZmLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/CreateTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXENyZWF0ZVRhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/MenuItemManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXE1lbnVJdGVtTWFuYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/ShopManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXFNob3BNYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/StaffManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXFN0YWZmTWFuYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/TableManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXFRhYmxlTWFuYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/UpdateArea.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXFVwZGF0ZUFyZWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/UpdateCat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXFVwZGF0ZUNhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/UpdateItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXFVwZGF0ZUl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/UpdateShop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXFVwZGF0ZVNob3AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/ShopOwner/UpdateTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcE93bmVyXFVwZGF0ZVRhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Staff/StaffHomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhZmZcU3RhZmZIb21lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/CoffeeCat/prn-coffee-cat/CoffeeCat/CoffeeCatRazporPage/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-6wp9p8g5m8

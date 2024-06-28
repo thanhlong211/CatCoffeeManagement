@@ -1,0 +1,49 @@
+﻿@page
+@model DetailAreaModel
+
+@{
+
+    <div class="container">
+        <h1 class="text-center my-4">Areas</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Area Name</th>
+                    <th>List</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var area in Model.Areas)
+                {
+                    <tr>
+                        <td>@area.AreaName</td>
+                        <td>
+                            <select onchange="window.location.href=this.value;">
+                                <option selected disabled>Choose...</option>
+                                <option value="@Url.Page("DetailTable", new { AreaId = @area.AreaId })">Table</option>
+                                <option value="@Url.Page("DetailCat", new { AreaId = @area.AreaId })">Cat</option>
+                            </select>
+                        </td>
+                    </tr>
+                }
+
+        </table>
+        <!-- Phân trang -->
+        <div class="d-flex justify-content-center my-3">
+            @if (Model.TotalPages > 1)
+            {
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        @for (var i = 1; i <= Model.TotalPages; i++)
+                        {
+                            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                                <a class="page-link" asp-page="./DetailArea" asp-route-pageIndex="@i" asp-route-shopId="@Model.ShopId">@i</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+        </div>
+        <a asp-page="./CustomerHomePage" class="btn btn-primary">Back</a>
+    </div>
+}
