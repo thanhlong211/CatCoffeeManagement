@@ -9,13 +9,17 @@ namespace Repositories.Admin {
             _context = context;
         }
 
-        public IEnumerable<User> GetAllAccount() {
-            try {
+        public IEnumerable<User> GetAllAccount()
+        {
+            try
+            {
                 return _context.Users
                 .Where(u => u.RoleId != 1)
                 .Include(u => u.Role)
                 .Include(u => u.Shop);
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine(ex.ToString());
                 throw;
             }

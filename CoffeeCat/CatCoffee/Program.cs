@@ -1,4 +1,4 @@
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,7 +31,8 @@ namespace CatCoffee
             using (var scope = AppHost.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var mainForm = services.GetRequiredService<Form1>();
+                var mainForm = services.GetRequiredService<LoginForm>();
+                var adminForm = services.GetRequiredService<AdminForm>();
                 Application.Run(mainForm);
             }
         }
@@ -53,7 +54,16 @@ namespace CatCoffee
             services.AddTransient(typeof(IProfileRepository), typeof(ProfileRepository));
             services.AddTransient(typeof(ICoffeeShopStaffRepository), typeof(CoffeeShopStaffRepository));
 
-            services.AddSingleton<Form1>();
+            services.AddScoped<LoginForm>();
+            services.AddTransient<AdminForm>();
+            services.AddTransient<Form1>();
+            services.AddTransient<ShopForm>();
+            services.AddTransient<AreasForm>();
+            services.AddTransient<MenusForm>();
+            services.AddTransient<CatsForm>();
+            services.AddTransient<TablesForm>();
+            services.AddTransient<ShopManagement>();
+            services.AddTransient<StaffHomeForm>();
         }
     }
 }

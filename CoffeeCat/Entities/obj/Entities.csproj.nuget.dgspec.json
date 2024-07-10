@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN221\\CoffeeCat\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj": {}
+    "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "D:\\PRN221\\CoffeeCat\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj": {
+    "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\CoffeeCat\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\PRN221\\CoffeeCat\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj",
+        "projectPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\white\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\CoffeeCat\\prn-coffee-cat\\CoffeeCat\\Entities\\obj\\",
+        "outputPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
