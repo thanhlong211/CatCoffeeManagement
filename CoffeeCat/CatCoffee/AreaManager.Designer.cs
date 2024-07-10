@@ -124,6 +124,7 @@
             button3.TabIndex = 9;
             button3.Text = "cat";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += btnCatManagement_Click;
             // 
             // button4
             // 

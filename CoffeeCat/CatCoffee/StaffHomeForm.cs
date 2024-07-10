@@ -45,13 +45,13 @@ namespace CatCoffee
                 var bookings = await _coffeeShopStaffRepository.GetBookingsByShopIdAsync(staff.ShopId);
                 dataGridViewBookings.DataSource = bookings.Select(s => new
                 {
+                    s.BookingId,
                     s.BookingCode,
                     s.BookingEnabled,
                     s.BookingStartTime,
                     s.BookingEndTime,
                
                 }).ToList();
-                CustomizeDataGridView();
             }
             else
             {
@@ -94,18 +94,7 @@ namespace CatCoffee
                 MessageBox.Show("Please select a booking to confirm.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private void CustomizeDataGridView()
-        {
-            dataGridViewBookings.Columns["BookingId"].Visible = false;
-            dataGridViewBookings.Columns["Customer"].Visible = false;
-           /* dataGridViewBookings.Columns["Tables"].Visible = false;*/
-        /*    var tableColumn = new DataGridViewTextBoxColumn();
-            tableColumn.HeaderText = "Tables";
-            tableColumn.Name = "Tables";
-            tableColumn.DataPropertyName = "Tables.TableName"; // Thay "Table" bằng tên Navigation Property thực tế trong Booking entity
-            dataGridViewBookings.Columns.Add(tableColumn);*/
 
-        }
         private void Authenticate()
         {
             userId = (int)Session.Get("userId");

@@ -30,7 +30,7 @@ namespace CatCoffee
         {
             try
             {
-                var tables = await _tableRepository.GetTablesByAreaIdAsync(_areaId);
+                var tables = await _tableRepository.GetTableByAreaIdAsync(_areaId);
                 if (tables != null)
                 {
                     dataGridViewTables.DataSource = tables;
@@ -177,6 +177,7 @@ namespace CatCoffee
             // Customize DataGridView appearance and behavior as needed
             dataGridViewTables.Columns["TableId"].Visible = false;
             dataGridViewTables.Columns["Area"].Visible = false;
+            dataGridViewTables.Columns["Bookings"].Visible = false;
             // Add additional customization here if required
         }
 
@@ -186,6 +187,7 @@ namespace CatCoffee
             {
                 DataGridViewRow row = dataGridViewTables.Rows[e.RowIndex];
                 txtTableName.Text = row.Cells["TableName"].Value.ToString();
+                txtCapacity.Text = row.Cells["TableCapacity"].Value.ToString();
             }
         }
 

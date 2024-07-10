@@ -14,7 +14,7 @@ namespace CatCoffee
         private readonly CoffeeCatContext _catContext;
         private readonly int _areaId;
 
-        public CatManagement(CoffeeShopManagerRepository<Cat> catRepository,CoffeeCatContext catContext, int areaId)
+        public CatManagement(CoffeeShopManagerRepository<Cat> catRepository, CoffeeCatContext catContext, int areaId)
         {
             InitializeComponent();
             _catRepository = catRepository;
@@ -28,9 +28,9 @@ namespace CatCoffee
         {
             try
             {
-                var cats = await _catRepository.GetCatsByAreaIdAsync(_areaId);
+                var cats = await _catRepository.GetCatByAreaIdAsync(_areaId);
 
-                if (cats != null )
+                if (cats != null)
                 {
                     dataGridViewCats.DataSource = cats;
                     CustomizeDataGridView();
@@ -51,6 +51,7 @@ namespace CatCoffee
         {
             dataGridViewCats.Columns["CatId"].Visible = false;
             dataGridViewCats.Columns["Area"].Visible = false;
+            dataGridViewCats.Columns["CatImage"].Visible = false;
         }
 
         private async void btnCreate_Click(object sender, EventArgs e)
@@ -206,6 +207,11 @@ namespace CatCoffee
         private void ClearCatForm()
         {
             txtCatName.Clear();
+        }
+
+        private void CatManagement_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

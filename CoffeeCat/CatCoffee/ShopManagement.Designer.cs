@@ -15,6 +15,14 @@
         private Button btnUpdate;
         private Button btnActivate;
         private Button btnDeactivate;
+        private Label label1;
+        private Label label2;
+        private TextBox txtEmail;
+        private MaskedTextBox txtPhone;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -27,7 +35,9 @@
             }
             base.Dispose(disposing);
         }
+
         #region Windows Form Designer generated code
+
         private void InitializeComponent()
         {
             dataGridViewShops = new DataGridView();
@@ -43,7 +53,6 @@
             label2 = new Label();
             txtEmail = new TextBox();
             txtPhone = new MaskedTextBox();
-            button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
@@ -60,7 +69,7 @@
             dataGridViewShops.Name = "dataGridViewShops";
             dataGridViewShops.RowHeadersWidth = 51;
             dataGridViewShops.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewShops.Size = new Size(839, 349);
+            dataGridViewShops.Size = new Size(639, 249);
             dataGridViewShops.TabIndex = 0;
             dataGridViewShops.CellClick += dataGridViewShops_CellClick;
             dataGridViewShops.CellContentClick += dataGridViewShops_CellContentClick;
@@ -68,7 +77,7 @@
             // lblShopName
             // 
             lblShopName.AutoSize = true;
-            lblShopName.Location = new Point(16, 431);
+            lblShopName.Location = new Point(16, 321);
             lblShopName.Margin = new Padding(4, 0, 4, 0);
             lblShopName.Name = "lblShopName";
             lblShopName.Size = new Size(90, 20);
@@ -77,7 +86,7 @@
             // 
             // txtShopName
             // 
-            txtShopName.Location = new Point(113, 426);
+            txtShopName.Location = new Point(113, 316);
             txtShopName.Margin = new Padding(4, 5, 4, 5);
             txtShopName.Name = "txtShopName";
             txtShopName.Size = new Size(265, 27);
@@ -86,7 +95,7 @@
             // lblAddress
             // 
             lblAddress.AutoSize = true;
-            lblAddress.Location = new Point(486, 431);
+            lblAddress.Location = new Point(386, 321);
             lblAddress.Margin = new Padding(4, 0, 4, 0);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new Size(65, 20);
@@ -95,15 +104,15 @@
             // 
             // txtAddress
             // 
-            txtAddress.Location = new Point(594, 424);
+            txtAddress.Location = new Point(459, 316);
             txtAddress.Margin = new Padding(4, 5, 4, 5);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(265, 27);
+            txtAddress.Size = new Size(200, 27);
             txtAddress.TabIndex = 4;
             // 
             // btnCreate
             // 
-            btnCreate.Location = new Point(34, 605);
+            btnCreate.Location = new Point(139, 407);
             btnCreate.Margin = new Padding(4, 5, 4, 5);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new Size(100, 35);
@@ -114,7 +123,7 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(278, 605);
+            btnUpdate.Location = new Point(278, 407);
             btnUpdate.Margin = new Padding(4, 5, 4, 5);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(100, 35);
@@ -125,7 +134,7 @@
             // 
             // btnActivate
             // 
-            btnActivate.Location = new Point(501, 605);
+            btnActivate.Location = new Point(413, 407);
             btnActivate.Margin = new Padding(4, 5, 4, 5);
             btnActivate.Name = "btnActivate";
             btnActivate.Size = new Size(100, 35);
@@ -136,7 +145,7 @@
             // 
             // btnDeactivate
             // 
-            btnDeactivate.Location = new Point(759, 605);
+            btnDeactivate.Location = new Point(559, 407);
             btnDeactivate.Margin = new Padding(4, 5, 4, 5);
             btnDeactivate.Name = "btnDeactivate";
             btnDeactivate.Size = new Size(100, 35);
@@ -148,47 +157,38 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(486, 507);
+            label1.Location = new Point(386, 377);
             label1.Name = "label1";
-            label1.Size = new Size(46, 20);
+            label1.Size = new Size(49, 20);
             label1.TabIndex = 10;
-            label1.Text = "email";
+            label1.Text = "Email:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(20, 514);
+            label2.Location = new Point(20, 377);
             label2.Name = "label2";
-            label2.Size = new Size(51, 20);
+            label2.Size = new Size(53, 20);
             label2.TabIndex = 11;
-            label2.Text = "phone";
+            label2.Text = "Phone:";
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(594, 487);
+            txtEmail.Location = new Point(459, 372);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(265, 27);
+            txtEmail.Size = new Size(200, 27);
             txtEmail.TabIndex = 12;
             // 
             // txtPhone
             // 
-            txtPhone.Location = new Point(113, 507);
+            txtPhone.Location = new Point(113, 370);
             txtPhone.Name = "txtPhone";
             txtPhone.Size = new Size(265, 27);
             txtPhone.TabIndex = 13;
             // 
-            // button1
-            // 
-            button1.Location = new Point(911, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 14;
-            button1.Text = "logout";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
-            button2.Location = new Point(911, 107);
+            button2.Location = new Point(687, 107);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 15;
@@ -198,33 +198,32 @@
             // 
             // button3
             // 
-            button3.Location = new Point(911, 185);
+            button3.Location = new Point(687, 185);
             button3.Name = "button3";
             button3.Size = new Size(94, 29);
             button3.TabIndex = 16;
-            button3.Text = "item";
+            button3.Text = "Item";
             button3.UseVisualStyleBackColor = true;
             button3.Click += BtnManageMenus_Click;
             // 
             // button4
             // 
-            button4.Location = new Point(20, 12);
+            button4.Location = new Point(687, 12);
             button4.Name = "button4";
             button4.Size = new Size(94, 29);
             button4.TabIndex = 17;
-            button4.Text = "logout";
+            button4.Text = "Logout";
             button4.UseVisualStyleBackColor = true;
-            button4.Click += this.btnLogout_Click;
+            button4.Click += btnLogout_Click;
             // 
             // ShopManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1067, 692);
+            ClientSize = new Size(800, 450);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(txtPhone);
             Controls.Add(txtEmail);
             Controls.Add(label2);
@@ -246,14 +245,7 @@
             ResumeLayout(false);
             PerformLayout();
         }
+
         #endregion
-        private Label label1;
-        private Label label2;
-        private TextBox txtEmail;
-        private MaskedTextBox txtPhone;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
     }
 }

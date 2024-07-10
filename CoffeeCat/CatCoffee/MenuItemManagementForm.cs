@@ -79,7 +79,7 @@ namespace CatCoffee
                 if (decimal.TryParse(txtPrice.Text, out decimal price))
                 {
                     int selectedRowIndex = dataGridViewMenuItems.SelectedRows[0].Index;
-                    int menuItemId = (int)dataGridViewMenuItems.Rows[selectedRowIndex].Cells["MenuItemId"].Value;
+                    int menuItemId = (int)dataGridViewMenuItems.Rows[selectedRowIndex].Cells["ItemId"].Value;
 
                     var menuItem = await _menuItemRepository.GetMenuItemsByIdAsync(menuItemId);
                     if (menuItem != null)
@@ -112,7 +112,7 @@ namespace CatCoffee
 
         private async void btnDelete_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private async void btnActivate_Click(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace CatCoffee
             if (dataGridViewMenuItems.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dataGridViewMenuItems.SelectedRows[0].Index;
-                int menuItemId = (int)dataGridViewMenuItems.Rows[selectedRowIndex].Cells["MenuItemId"].Value;
+                int menuItemId = (int)dataGridViewMenuItems.Rows[selectedRowIndex].Cells["ItemId"].Value;
 
                 var menuItem = await _menuItemRepository.GetMenuItemsByIdAsync(menuItemId);
                 if (menuItem != null)
@@ -150,7 +150,7 @@ namespace CatCoffee
             if (dataGridViewMenuItems.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dataGridViewMenuItems.SelectedRows[0].Index;
-                int menuItemId = (int)dataGridViewMenuItems.Rows[selectedRowIndex].Cells["MenuItemId"].Value;
+                int menuItemId = (int)dataGridViewMenuItems.Rows[selectedRowIndex].Cells["ItemName"].Value;
 
                 var menuItem = await _menuItemRepository.GetMenuItemsByIdAsync(menuItemId);
                 if (menuItem != null)
@@ -180,8 +180,8 @@ namespace CatCoffee
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridViewMenuItems.Rows[e.RowIndex];
-                txtMenuItemName.Text = row.Cells["MenuItemName"].Value.ToString();
-                txtPrice.Text = row.Cells["MenuItemPrice"].Value.ToString();
+                txtMenuItemName.Text = row.Cells["ItemName"].Value.ToString();
+                txtPrice.Text = row.Cells["ItemPrice"].Value.ToString();
             }
         }
 
@@ -193,8 +193,20 @@ namespace CatCoffee
 
         private void CustomizeDataGridView()
         {
-            dataGridViewMenuItems.Columns["MenuItemId"].Visible = false;
+            dataGridViewMenuItems.Columns["ItemId"].Visible = false;
             dataGridViewMenuItems.Columns["ShopId"].Visible = false;
+            dataGridViewMenuItems.Columns["Shop"].Visible = false;
+            dataGridViewMenuItems.Columns["Bookings"].Visible = false;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuItemManagementForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

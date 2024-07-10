@@ -43,7 +43,7 @@
             // 
             // txtCatName
             // 
-            txtCatName.Location = new Point(100, 230);
+            txtCatName.Location = new Point(118, 226);
             txtCatName.Name = "txtCatName";
             txtCatName.Size = new Size(200, 27);
             txtCatName.TabIndex = 1;
@@ -109,6 +109,7 @@
             Controls.Add(dataGridViewCats);
             Name = "CatManagement";
             Text = "CatManagement";
+            Load += CatManagement_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewCats).EndInit();
             ResumeLayout(false);
             PerformLayout();

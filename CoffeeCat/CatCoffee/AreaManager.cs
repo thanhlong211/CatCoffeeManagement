@@ -98,8 +98,8 @@ namespace CatCoffee
 
                 if (area != null)
                 {
-                    // Check if the current user is authorized to update this area
-                    if (area.ShopId != shopId)
+                   /* shopId = (int)Session.Get("ShopId");*/
+                    if (area.ShopId != _shopId)
                     {
                         MessageBox.Show("You are not authorized to update this area.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
