@@ -18,16 +18,22 @@ namespace CatCoffee
     {
         private readonly ICustomerRepository<Shop> _repository;
         private readonly CoffeeCatContext _dbContext;
+        private readonly SessionRepository _sessionRepository;
+        public User? LoggedInUser { get; set; }
         private int _selectedShopId;
 
         private int _bookingId;
-        public ShopForm(ICustomerRepository<Shop> repository, CoffeeCatContext dbContext)
+        public ShopForm(ICustomerRepository<Shop> repository, CoffeeCatContext dbContext, SessionRepository sessionRepository)
         {
             _repository = repository;
 
             InitializeComponent();
             _dbContext = dbContext;
+            _sessionRepository = sessionRepository;
         }
+        private int userId;
+        private int? shopId;
+        private int role;
 
         private async void btnSearch_Click(object sender, EventArgs e)
         {
@@ -40,7 +46,7 @@ namespace CatCoffee
                 shopsQuery = shopsQuery.Where(s => s.ShopName.Contains(searchString));
             }
 
- 
+
 
             dataGridViewShops.DataSource = await shopsQuery.ToListAsync();
         }
@@ -49,11 +55,49 @@ namespace CatCoffee
         {
 
         }
+        private void Authenticate()
+        {
+            userId = (int)Session.Get("userId");
+            if (userId == null)
+            {
+                MessageBox.Show("Please log in first.", "Authentication Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close(); // Close the form or redirect to login form
+            }
+        }
+
+        private void Authorization()
+        {
+            role = (int)Session.Get("role");
+            if (role != 4)
+            {
+                MessageBox.Show("You are not authorized to access this page.", "Authorization Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close(); // Close the form or redirect to error form
+            }
+        }
+
+        private void SetUserSession()
+        {
+            userId = (int)Session.Get("userId");
+            if (userId != null)
+            {
+                LoggedInUser = _sessionRepository.GetUserById(userId);
+            }
+        }
 
         private async void ShopForm_Load(object sender, EventArgs e)
         {
+            Authenticate();
+            Authorization();
+            SetUserSession();
+            userId = (int)Session.Get("userId");
+            shopId = (int?)Session.Get("shopId");
+            role = (int)Session.Get("role");
             IQueryable<Shop> shopsQuery = await _repository.GetShopEnableAsync();
             dataGridViewShops.DataSource = await shopsQuery.ToListAsync();
+            {
+                lblWelcome.Text = "Hello " + LoggedInUser.CustomerName;
+            }
+
         }
         private async void dataGridViewShops_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -91,7 +135,7 @@ namespace CatCoffee
             }
         }
 
-       
+
         private async void btnShowAreas_Click(object sender, EventArgs e)
         {
             try
@@ -104,6 +148,23 @@ namespace CatCoffee
             {
                 MessageBox.Show($"Error showing Areas form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+
+            // Xóa các giá trị session liên quan
+            Session.Remove("userId");
+            Session.Remove("role");
+            Session.Remove("shopId");
+
+            // Đóng form hiện tại
+            this.Close();
+
+
+            LoginForm loginForm = new LoginForm(new SignInRepository(_dbContext), new CoffeeCatContext());
+            loginForm.Show();
         }
     }
 }

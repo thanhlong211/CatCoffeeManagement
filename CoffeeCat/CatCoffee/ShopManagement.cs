@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace CatCoffee
 {
@@ -105,13 +106,39 @@ namespace CatCoffee
                 return;
             }
 
+            string shopName = txtShopName.Text.Trim();
+            string shopAddress = txtAddress.Text.Trim();
+            string shopEmail = txtEmail.Text.Trim();
+            string shopPhone = txtPhone.Text.Trim();
+
+            // Kiểm tra tính hợp lệ của dữ liệu nhập vào
+            if (string.IsNullOrEmpty(shopName) || string.IsNullOrEmpty(shopAddress) || string.IsNullOrEmpty(shopEmail) || string.IsNullOrEmpty(shopPhone))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Kiểm tra tính hợp lệ của email
+            if (!Regex.IsMatch(shopEmail, @"^[^@\s]+@gmail\.com$"))
+            {
+                MessageBox.Show("Email must be a valid Gmail address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Kiểm tra tính hợp lệ của số điện thoại
+            if (!Regex.IsMatch(shopPhone, @"^0\d{9}$"))
+            {
+                MessageBox.Show("Phone number must be 10 digits and start with 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var shop = new Shop
             {
-                ShopName = txtShopName.Text,
-                ShopAddress = txtAddress.Text,
+                ShopName = shopName,
+                ShopAddress = shopAddress,
                 ShopEnabled = true,
-                ShopTelephone = txtPhone.Text,
-                ShopEmail = txtEmail.Text,
+                ShopTelephone = shopPhone,
+                ShopEmail = shopEmail,
                 Users = new List<User> { user } // Assuming Users is a collection in Shop
             };
 
@@ -165,10 +192,36 @@ namespace CatCoffee
                         return;
                     }
 
-                    shop.ShopName = txtShopName.Text;
-                    shop.ShopAddress = txtAddress.Text;
-                    shop.ShopTelephone = txtPhone.Text;
-                    shop.ShopEmail = txtEmail.Text;
+                    string shopName = txtShopName.Text.Trim();
+                    string shopAddress = txtAddress.Text.Trim();
+                    string shopEmail = txtEmail.Text.Trim();
+                    string shopPhone = txtPhone.Text.Trim();
+
+                    // Kiểm tra tính hợp lệ của dữ liệu nhập vào
+                    if (string.IsNullOrEmpty(shopName) || string.IsNullOrEmpty(shopAddress) || string.IsNullOrEmpty(shopEmail) || string.IsNullOrEmpty(shopPhone))
+                    {
+                        MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Kiểm tra tính hợp lệ của email
+                    if (!Regex.IsMatch(shopEmail, @"^[^@\s]+@gmail\.com$"))
+                    {
+                        MessageBox.Show("Email must be a valid Gmail address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Kiểm tra tính hợp lệ của số điện thoại
+                    if (!Regex.IsMatch(shopPhone, @"^0\d{9}$"))
+                    {
+                        MessageBox.Show("Phone number must be 10 digits and start with 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    shop.ShopName = shopName;
+                    shop.ShopAddress = shopAddress;
+                    shop.ShopTelephone = shopPhone;
+                    shop.ShopEmail = shopEmail;
 
                     try
                     {

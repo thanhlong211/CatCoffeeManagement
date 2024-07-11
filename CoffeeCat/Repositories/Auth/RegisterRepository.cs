@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Repositories.Auth {
     public class RegisterRepository : IRegisterRepository {
@@ -15,6 +16,10 @@ namespace Repositories.Auth {
                 Console.WriteLine($"An error occurred while creating the user: {ex.Message}");
                 throw;
             }
+        }
+        public async Task<bool> EmailExistsAsync(string email)
+        {
+            return await _context.Users.AnyAsync(u => u.CustomerEmail == email);
         }
         public bool IsExistedEmail(string email) {
             try {

@@ -40,16 +40,23 @@ namespace CatCoffee
 
             if (user != null)
             {
+                if (!(user.CustomerEnabled ?? false))
+                {
+                    MessageBox.Show("Your account is disabled. Please contact the administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 Session.Set("userId", user.CustomerId);
                 Session.Set("role", user.Role.RoleId);
                 Session.Set("shopId", user.ShopId);
 
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 // Navigate to another form or main application window
                 string pageIndex = RoleDivision(user.RoleId ?? 0);
                 Form nextForm = GetFormByRole(pageIndex);
                 this.Hide();
-                 nextForm.Show();
+                nextForm.Show();
             }
             else
             {
@@ -59,8 +66,8 @@ namespace CatCoffee
         private void btnGoToRegister_Click(object sender, EventArgs e)
         {
             var registerForm = new RegisterForm(new RegisterRepository(_dbContext),new CoffeeCatContext());
-            registerForm.Show();
-            this.Close();
+            registerForm.ShowDialog();
+           
         }
 
         private string RoleDivision(int role)
@@ -89,7 +96,7 @@ namespace CatCoffee
                 case "Staff":
                     return new StaffHomeForm(new CoffeeShopStaffRepository(_dbContext), new SessionRepository(_dbContext), new CoffeeCatContext());
                 default:
-                    return new ShopForm(new CustomerRepository<Shop>(_dbContext),new CoffeeCatContext());
+                    return new ShopForm(new CustomerRepository<Shop>(_dbContext),new CoffeeCatContext(),new SessionRepository(_dbContext));
             }
         }
 

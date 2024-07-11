@@ -34,12 +34,14 @@
             btnShowAreas = new Button();
             btnShowMenus = new Button();
             btnHistory = new Button();
+            lblWelcome = new Label();
+            btnLogout = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewShops).BeginInit();
             SuspendLayout();
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(146, 25);
+            txtSearch.Location = new Point(169, 52);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(240, 27);
             txtSearch.TabIndex = 1;
@@ -57,7 +59,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(34, 25);
+            btnSearch.Location = new Point(34, 52);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 29);
             btnSearch.TabIndex = 4;
@@ -95,11 +97,32 @@
             btnHistory.UseVisualStyleBackColor = true;
             btnHistory.Click += btnShowbookingHistory_Click;
             // 
+            // lblWelcome
+            // 
+            lblWelcome.AutoSize = true;
+            lblWelcome.Location = new Point(34, 9);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(71, 20);
+            lblWelcome.TabIndex = 9;
+            lblWelcome.Text = "Welcome";
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(659, 5);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(94, 29);
+            btnLogout.TabIndex = 10;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
+            // 
             // ShopForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnLogout);
+            Controls.Add(lblWelcome);
             Controls.Add(btnHistory);
             Controls.Add(btnShowMenus);
             Controls.Add(btnShowAreas);
@@ -124,5 +147,7 @@
         private Button btnShowAreas;
         private Button btnShowMenus;
         private Button btnHistory;
+        private Label lblWelcome;
+        private Button btnLogout;
     }
 }

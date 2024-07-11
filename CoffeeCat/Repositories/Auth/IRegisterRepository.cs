@@ -5,5 +5,6 @@ namespace Repositories.Auth {
         Task RegisterAsync(User user);
 
         bool IsExistedEmail(string email);
+        Task<bool> EmailExistsAsync(string email);
     }
 }

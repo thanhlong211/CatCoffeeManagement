@@ -3,6 +3,7 @@ using Repositories.Admin;
 using Repositories.Auth;
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -106,7 +107,7 @@ namespace CatCoffee
             userId = (int)Session.Get("userId");
             if (userId != null)
             {
-                LoggedInUser = _sessionRepository.GetUserById(1);
+                LoggedInUser = _sessionRepository.GetUserById(userId);
             }
         }
 
@@ -142,15 +143,33 @@ namespace CatCoffee
             try
             {
                 // Lấy thông tin từ các control nhập liệu trên form
-                string shopOwnerName = txtShopOwnerName.Text;
-                string shopOwnerEmail = txtShopOwnerEmail.Text;
-                string shopOwnerPassword = txtShopOwnerPassword.Text;
-                string phoneNumber = txtPhone.Text;
+                string shopOwnerName = txtShopOwnerName.Text.Trim();
+                string shopOwnerEmail = txtShopOwnerEmail.Text.Trim();
+                string shopOwnerPassword = txtShopOwnerPassword.Text.Trim();
+                string phoneNumber = txtPhone.Text.Trim();
 
                 // Kiểm tra tính hợp lệ của dữ liệu nhập vào (ví dụ: kiểm tra rỗng, độ dài, ...)
-                if (string.IsNullOrEmpty(shopOwnerName) || string.IsNullOrEmpty(shopOwnerEmail) || string.IsNullOrEmpty(shopOwnerPassword))
+                if (string.IsNullOrEmpty(shopOwnerName) || string.IsNullOrEmpty(shopOwnerEmail) || string.IsNullOrEmpty(shopOwnerPassword) || string.IsNullOrEmpty(phoneNumber))
                 {
                     MessageBox.Show("Please fill in all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!Regex.IsMatch(phoneNumber, @"^0\d{9}$"))
+                {
+                    MessageBox.Show("Phone number must be 10 digits and start with 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!Regex.IsMatch(shopOwnerEmail, @"^[^@\s]+@gmail\.com$"))
+                {
+                    MessageBox.Show("Email must be a valid Gmail address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!Regex.IsMatch(shopOwnerPassword, @"^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"))
+                {
+                    MessageBox.Show("Password must be at least 8 characters long, and include at least one uppercase letter, one number, and one special character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -161,19 +180,21 @@ namespace CatCoffee
                     CustomerEmail = shopOwnerEmail,
                     CustomerPassword = shopOwnerPassword,
                     CustomerTelephone = phoneNumber,
-                    RoleId = 2 ,
+                    RoleId = 2,
                     CustomerEnabled = true,
                 };
-
 
                 await _adminRepository.CreateShopOwner(shopOwner);
 
                 MessageBox.Show("ShopOwner account created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Clear the form fields
                 txtShopOwnerName.Text = string.Empty;
                 txtShopOwnerEmail.Text = string.Empty;
                 txtShopOwnerPassword.Text = string.Empty;
                 txtPhone.Text = string.Empty;
-                SetUsers();
+
+                SetUsers(); // Refresh the user list
             }
             catch (Exception ex)
             {
