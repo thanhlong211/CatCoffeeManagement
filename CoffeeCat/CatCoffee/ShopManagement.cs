@@ -190,12 +190,7 @@ namespace CatCoffee
                 if (shop != null)
                 {
                     
-                    // Kiểm tra xem người dùng có liên kết với cửa hàng hay không
-                    if (!shop.Users.Any(u => u.CustomerId == user.CustomerId))
-                    {
-                        MessageBox.Show("You are not authorized to update this shop.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+                  
 
                     string shopName = txtShopName.Text.Trim();
                     string shopAddress = txtAddress.Text.Trim();
@@ -260,12 +255,6 @@ namespace CatCoffee
                 userId = (int)Session.Get("userId");
                 if (shop != null)
                 {
-                    // Kiểm tra xem người dùng có liên kết với cửa hàng hay không
-                    if (!shop.Users.Any(u => u.CustomerId == userId))
-                    {
-                        MessageBox.Show("You are not authorized to activate this shop.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
 
                     shop.ShopEnabled = true;
 
@@ -300,13 +289,7 @@ namespace CatCoffee
 
                 if (shop != null)
                 {
-                    userId = (int)Session.Get("userId");
-                    // Kiểm tra xem người dùng có liên kết với cửa hàng hay không
-                    if (!shop.Users.Any(u => u.CustomerId == userId))
-                    {
-                        MessageBox.Show("You are not authorized to deactivate this shop.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+                    
 
                     shop.ShopEnabled = false;
 
