@@ -75,6 +75,7 @@
             button1.TabIndex = 4;
             button1.Text = "table";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += btnShowTables_Click;
             // 
             // button2
             // 

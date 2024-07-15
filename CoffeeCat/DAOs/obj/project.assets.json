@@ -8571,24 +8571,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\white\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\tranb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\DAOs\\DAOs.csproj",
+      "projectUniqueName": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\DAOs\\DAOs.csproj",
       "projectName": "DAOs",
-      "projectPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\DAOs\\DAOs.csproj",
-      "packagesPath": "C:\\Users\\white\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\DAOs\\obj\\",
+      "projectPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\DAOs\\DAOs.csproj",
+      "packagesPath": "C:\\Users\\tranb\\.nuget\\packages\\",
+      "outputPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\DAOs\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\white\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\tranb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8603,8 +8598,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj"
+            "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Entities\\Entities.csproj": {
+              "projectPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Entities\\Entities.csproj"
             }
           }
         }
@@ -8665,7 +8660,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

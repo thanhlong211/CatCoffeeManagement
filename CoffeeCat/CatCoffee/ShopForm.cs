@@ -68,7 +68,7 @@ namespace CatCoffee
         private void Authorization()
         {
             role = (int)Session.Get("role");
-            if (role != 4)
+            if (role != 2)
             {
                 MessageBox.Show("You are not authorized to access this page.", "Authorization Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close(); // Close the form or redirect to error form

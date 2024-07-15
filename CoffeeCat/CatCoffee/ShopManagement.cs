@@ -97,6 +97,7 @@ namespace CatCoffee
 
         private async void btnCreate_Click(object sender, EventArgs e)
         {
+            userId = (int)Session.Get("userId");
             User user = _sessionRepository.GetUserById(userId);
 
             // Kiểm tra xem người dùng đã có liên kết với cửa hàng hay chưa
@@ -176,6 +177,7 @@ namespace CatCoffee
 
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
+            userId = (int)Session.Get("userId");
             if (dataGridViewShops.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dataGridViewShops.SelectedRows[0].Index;
@@ -245,6 +247,7 @@ namespace CatCoffee
 
         private async void btnActivate_Click(object sender, EventArgs e)
         {
+            userId = (int)Session.Get("userId");
             if (dataGridViewShops.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dataGridViewShops.SelectedRows[0].Index;
@@ -284,6 +287,7 @@ namespace CatCoffee
 
         private async void btnDeactivate_Click(object sender, EventArgs e)
         {
+            userId = (int)Session.Get("userId");
             if (dataGridViewShops.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dataGridViewShops.SelectedRows[0].Index;
