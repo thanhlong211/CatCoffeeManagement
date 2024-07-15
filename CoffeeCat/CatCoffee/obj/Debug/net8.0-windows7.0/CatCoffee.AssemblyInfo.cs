@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CatCoffee")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7cb702c6c454affe2ee4475c6375dd8e0aff0605")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9500c74d9c11769008063f3325e361aa2ec0858")]
 [assembly: System.Reflection.AssemblyProductAttribute("CatCoffee")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CatCoffee")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -38,16 +38,16 @@
             // dataGridViewBookings
             // 
             dataGridViewBookings.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewBookings.Location = new Point(12, 42);
+            dataGridViewBookings.Location = new Point(23, 42);
             dataGridViewBookings.Name = "dataGridViewBookings";
             dataGridViewBookings.RowHeadersWidth = 51;
-            dataGridViewBookings.Size = new Size(400, 150);
+            dataGridViewBookings.Size = new Size(716, 260);
             dataGridViewBookings.TabIndex = 0;
             dataGridViewBookings.CellContentClick += dataGridViewBookings_CellContentClick;
             // 
             // btnConfirmBooking
             // 
-            btnConfirmBooking.Location = new Point(12, 209);
+            btnConfirmBooking.Location = new Point(296, 308);
             btnConfirmBooking.Name = "btnConfirmBooking";
             btnConfirmBooking.Size = new Size(120, 40);
             btnConfirmBooking.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 7);
+            button1.Location = new Point(658, 7);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // StaffHomeForm
             // 
-            ClientSize = new Size(424, 261);
+            ClientSize = new Size(764, 376);
             Controls.Add(button1);
             Controls.Add(btnConfirmBooking);
             Controls.Add(dataGridViewBookings);

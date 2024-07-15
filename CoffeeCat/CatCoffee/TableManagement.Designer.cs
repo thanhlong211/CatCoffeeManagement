@@ -32,7 +32,6 @@
             txtTableName = new TextBox();
             btnCreate = new Button();
             btnUpdate = new Button();
-            btnDelete = new Button();
             btnActivate = new Button();
             btnDeactivate = new Button();
             label1 = new Label();
@@ -78,16 +77,6 @@
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
             btnUpdate.Click += btnUpdate_Click;
-            // 
-            // btnDelete
-            // 
-            btnDelete.Location = new Point(287, 240);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(75, 33);
-            btnDelete.TabIndex = 4;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
             // 
             // btnActivate
             // 
@@ -151,7 +140,6 @@
             Controls.Add(label1);
             Controls.Add(btnDeactivate);
             Controls.Add(btnActivate);
-            Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnCreate);
             Controls.Add(txtTableName);
@@ -170,7 +158,6 @@
         private System.Windows.Forms.TextBox txtTableName;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnActivate;
         private System.Windows.Forms.Button btnDeactivate;
         private Label label1;

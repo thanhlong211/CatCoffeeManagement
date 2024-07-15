@@ -53,27 +53,27 @@
             dataGridViewMenuItems.Location = new Point(12, 12);
             dataGridViewMenuItems.Name = "dataGridViewMenuItems";
             dataGridViewMenuItems.RowHeadersWidth = 51;
-            dataGridViewMenuItems.Size = new Size(400, 150);
+            dataGridViewMenuItems.Size = new Size(733, 191);
             dataGridViewMenuItems.TabIndex = 0;
             dataGridViewMenuItems.CellClick += dataGridViewMenuItems_CellClick;
             // 
             // txtMenuItemName
             // 
-            txtMenuItemName.Location = new Point(96, 180);
+            txtMenuItemName.Location = new Point(96, 209);
             txtMenuItemName.Name = "txtMenuItemName";
-            txtMenuItemName.Size = new Size(100, 27);
+            txtMenuItemName.Size = new Size(203, 27);
             txtMenuItemName.TabIndex = 1;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(96, 220);
+            txtPrice.Location = new Point(96, 242);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(100, 27);
+            txtPrice.Size = new Size(203, 27);
             txtPrice.TabIndex = 2;
             // 
             // btnCreate
             // 
-            btnCreate.Location = new Point(221, 180);
+            btnCreate.Location = new Point(305, 209);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new Size(85, 27);
             btnCreate.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(221, 220);
+            btnUpdate.Location = new Point(305, 242);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(85, 27);
             btnUpdate.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             // btnActivate
             // 
-            btnActivate.Location = new Point(331, 220);
+            btnActivate.Location = new Point(407, 242);
             btnActivate.Name = "btnActivate";
             btnActivate.Size = new Size(84, 27);
             btnActivate.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             // btnDeactivate
             // 
-            btnDeactivate.Location = new Point(331, 180);
+            btnDeactivate.Location = new Point(407, 209);
             btnDeactivate.Name = "btnDeactivate";
             btnDeactivate.Size = new Size(81, 27);
             btnDeactivate.TabIndex = 7;
@@ -114,7 +114,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(11, 187);
+            label1.Location = new Point(11, 216);
             label1.Name = "label1";
             label1.Size = new Size(79, 20);
             label1.TabIndex = 8;
@@ -123,7 +123,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(11, 227);
+            label2.Location = new Point(12, 249);
             label2.Name = "label2";
             label2.Size = new Size(41, 20);
             label2.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             // MenuItemManagementForm
             // 
-            ClientSize = new Size(504, 310);
+            ClientSize = new Size(755, 291);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnDeactivate);
