@@ -155,9 +155,7 @@ namespace CatCoffee
 
 
             // Xóa các giá trị session liên quan
-            Session.Remove("userId");
-            Session.Remove("role");
-            Session.Remove("shopId");
+            Session.Clear();
 
             // Đóng form hiện tại
             this.Close();

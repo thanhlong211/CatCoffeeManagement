@@ -50,11 +50,17 @@ namespace CatCoffee
 
         private async void btnCreate_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(txtCapacity.Text, out int tableCapacity))
+            {
+                MessageBox.Show("Please enter a valid number for table capacity.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             var table = new Table
             {
+
                 TableName = txtTableName.Text,
                 TableEnabled = true,
-                TableCapacity = txtCapacity.TabIndex,
+                TableCapacity = tableCapacity,
                 AreaId = _areaId
             };
 
@@ -73,6 +79,11 @@ namespace CatCoffee
 
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(txtCapacity.Text, out int tableCapacity))
+            {
+                MessageBox.Show("Please enter a valid number for table capacity.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (dataGridViewTables.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dataGridViewTables.SelectedRows[0].Index;
@@ -82,6 +93,7 @@ namespace CatCoffee
                 if (table != null)
                 {
                     table.TableName = txtTableName.Text;
+                    table.TableCapacity = tableCapacity;
                     try
                     {
                         await _tableRepository.UpdateAsync(table);
@@ -192,6 +204,16 @@ namespace CatCoffee
         }
 
         private void TableManagement_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCapacity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

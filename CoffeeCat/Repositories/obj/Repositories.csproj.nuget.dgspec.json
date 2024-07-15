@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Repositories\\Repositories.csproj": {}
+    "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\DAOs\\DAOs.csproj": {
+    "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\DAOs\\DAOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\DAOs\\DAOs.csproj",
+        "projectUniqueName": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\DAOs\\DAOs.csproj",
         "projectName": "DAOs",
-        "projectPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\DAOs\\DAOs.csproj",
-        "packagesPath": "C:\\Users\\tranb\\.nuget\\packages\\",
-        "outputPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\DAOs\\obj\\",
+        "projectPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\DAOs\\DAOs.csproj",
+        "packagesPath": "C:\\Users\\white\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\DAOs\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tranb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\white\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Entities\\Entities.csproj": {
-                "projectPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Entities\\Entities.csproj"
+              "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj"
               }
             }
           }
@@ -91,21 +95,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Entities\\Entities.csproj": {
+    "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\tranb\\.nuget\\packages\\",
-        "outputPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Entities\\obj\\",
+        "projectPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\white\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tranb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\white\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -190,21 +198,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Repositories\\Repositories.csproj": {
+    "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Repositories\\Repositories.csproj",
-        "packagesPath": "C:\\Users\\tranb\\.nuget\\packages\\",
-        "outputPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\Repositories\\obj\\",
+        "projectPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\white\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tranb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\white\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -219,8 +231,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\DAOs\\DAOs.csproj": {
-                "projectPath": "E:\\PRN211K8\\CatCoffeeManagement\\CoffeeCat\\DAOs\\DAOs.csproj"
+              "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\DAOs\\DAOs.csproj": {
+                "projectPath": "D:\\PRN211\\prn-coffee-cat\\CoffeeCat\\DAOs\\DAOs.csproj"
               }
             }
           }
@@ -281,7 +293,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -99,8 +99,8 @@ namespace CatCoffee
         {
             userId = (int)Session.Get("userId");
             User user = _sessionRepository.GetUserById(userId);
+           
 
-            // Kiểm tra xem người dùng đã có liên kết với cửa hàng hay chưa
             if (user.Shop != null)
             {
                 MessageBox.Show("You already have a linked shop. You cannot create a new one.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -177,18 +177,21 @@ namespace CatCoffee
 
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
+            shopId = (int?)Session.Get("shopId");
             userId = (int)Session.Get("userId");
+            User user = _sessionRepository.GetUserById(userId);
             if (dataGridViewShops.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dataGridViewShops.SelectedRows[0].Index;
-                int shopId = (int)dataGridViewShops.Rows[selectedRowIndex].Cells["ShopId"].Value;
+                SelectedShopId = (int)dataGridViewShops.Rows[selectedRowIndex].Cells["ShopId"].Value;
 
                 var shop = await _shopRepository.GetShopByIdAsync(shopId);
 
                 if (shop != null)
                 {
+                    
                     // Kiểm tra xem người dùng có liên kết với cửa hàng hay không
-                    if (!shop.Users.Any(u => u.CustomerId == userId))
+                    if (!shop.Users.Any(u => u.CustomerId == user.CustomerId))
                     {
                         MessageBox.Show("You are not authorized to update this shop.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -247,14 +250,14 @@ namespace CatCoffee
 
         private async void btnActivate_Click(object sender, EventArgs e)
         {
-            userId = (int)Session.Get("userId");
+           
             if (dataGridViewShops.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dataGridViewShops.SelectedRows[0].Index;
-                int shopId = (int)dataGridViewShops.Rows[selectedRowIndex].Cells["ShopId"].Value;
-
+                SelectedShopId = (int)dataGridViewShops.Rows[selectedRowIndex].Cells["ShopId"].Value;
+                shopId = (int?)Session.Get("shopId");
                 var shop = await _shopRepository.GetShopByIdAsync(shopId);
-
+                userId = (int)Session.Get("userId");
                 if (shop != null)
                 {
                     // Kiểm tra xem người dùng có liên kết với cửa hàng hay không
@@ -287,16 +290,17 @@ namespace CatCoffee
 
         private async void btnDeactivate_Click(object sender, EventArgs e)
         {
-            userId = (int)Session.Get("userId");
+            
             if (dataGridViewShops.SelectedRows.Count > 0)
             {
                 int selectedRowIndex = dataGridViewShops.SelectedRows[0].Index;
-                int shopId = (int)dataGridViewShops.Rows[selectedRowIndex].Cells["ShopId"].Value;
-
+                SelectedShopId = (int)dataGridViewShops.Rows[selectedRowIndex].Cells["ShopId"].Value;
+               /* shopId = (int?)Session.Get("shopId");*/
                 var shop = await _shopRepository.GetShopByIdAsync(shopId);
 
                 if (shop != null)
                 {
+                    userId = (int)Session.Get("userId");
                     // Kiểm tra xem người dùng có liên kết với cửa hàng hay không
                     if (!shop.Users.Any(u => u.CustomerId == userId))
                     {

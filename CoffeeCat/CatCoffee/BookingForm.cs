@@ -23,7 +23,7 @@ namespace CatCoffee
         private int userId;
         private int itemId;
         private int tableId;
-        public BookingForm(int areaId, int shopId, ICoffeeShopManagerRepository<Booking> bookingRepository, ICoffeeShopManagerRepository<Table> tableRepository,ICoffeeShopManagerRepository<MenuItem> itemRepository,ICustomerRepository<MenuItem> repository,CoffeeCatContext catContext) 
+        public BookingForm(int areaId, int shopId, ICoffeeShopManagerRepository<Booking> bookingRepository, ICoffeeShopManagerRepository<Table> tableRepository, ICoffeeShopManagerRepository<MenuItem> itemRepository, ICustomerRepository<MenuItem> repository, CoffeeCatContext catContext)
         {
             InitializeComponent();
             _areaId = areaId;
@@ -119,7 +119,7 @@ namespace CatCoffee
             }
 
             // Xóa nội dung form để chuẩn bị cho lần nhập tiếp theo
-            ClearForm();
+
         }
 
         private TimeSpan GetSelectedTime(ComboBox comboBox)
@@ -131,10 +131,10 @@ namespace CatCoffee
 
         private void DisplayAvailableTables(List<Table> tables)
         {
-           
+
             dataGridViewAvailableTables.Rows.Clear();
 
-           
+
             foreach (var table in tables)
             {
                 dataGridViewAvailableTables.Rows.Add(table.TableId, table.TableName, table.TableCapacity, table.TableStatus);
@@ -145,11 +145,11 @@ namespace CatCoffee
             string code = "BOOK" + DateTime.Now.ToString("yyyyMMddHHmmss");
             return code;
         }
-      
+
 
         private async void btnBook_Click(object sender, EventArgs e)
         {
-            
+
             DateTime bookingDate = dateTimePickerBookingDate.Value.Date;
             TimeSpan startTime = GetSelectedTime(comboBoxStartTime);
             TimeSpan endTime = GetSelectedTime(comboBoxEndTime);
@@ -180,19 +180,19 @@ namespace CatCoffee
                 BookingEndTime = bookingEndTime,
                 Tables = tables,
                 Items = items,
-                BookingEnabled = false, 
+                BookingEnabled = false,
                 CustomerId = userId // Giả sử userId đã được thiết lập từ session
             };
 
             try
             {
-                
+
                 await _bookingRepository.AddAsync(booking);
 
-               
+
                 await _bookingRepository.AddTablesToBookingAsync(booking.BookingId, _selectedTableIds);
 
-                
+
                 MessageBox.Show("Booking successfully created!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 var bookingHistoryForm = new BookingHistoryForm(new CoffeeShopManagerRepository<Booking>(_catContext), new SessionRepository(_catContext), new CoffeeShopStaffRepository(_catContext));
                 bookingHistoryForm.ShowDialog();
@@ -233,6 +233,16 @@ namespace CatCoffee
             {
                 MessageBox.Show($"Error loading Menu Items: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dateTimePickerBookingDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

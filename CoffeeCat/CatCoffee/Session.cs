@@ -38,5 +38,9 @@ namespace CatCoffee
                 sessionValues.Remove(key);
             }
         }
+        public static void Clear()
+        {
+            sessionValues.Clear();
+        }
     }
 }

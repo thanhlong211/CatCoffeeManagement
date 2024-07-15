@@ -49,9 +49,11 @@ namespace CatCoffee
                     return;
                 }
 
-                Session.Set("userId", user.CustomerId);
-                Session.Set("role", user.Role.RoleId);
-                Session.Set("shopId", user.ShopId);
+              
+                    Session.Set("userId", user.CustomerId);
+                    Session.Set("role", user.RoleId);
+                    Session.Set("shopId", user.ShopId);
+               
 
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

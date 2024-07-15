@@ -123,6 +123,7 @@
             label3.Size = new Size(64, 20);
             label3.TabIndex = 10;
             label3.Text = "capacity";
+            label3.Click += label3_Click;
             // 
             // txtCapacity
             // 
@@ -130,6 +131,7 @@
             txtCapacity.Name = "txtCapacity";
             txtCapacity.Size = new Size(215, 27);
             txtCapacity.TabIndex = 11;
+            txtCapacity.TextChanged += txtCapacity_TextChanged;
             // 
             // TableManagement
             // 

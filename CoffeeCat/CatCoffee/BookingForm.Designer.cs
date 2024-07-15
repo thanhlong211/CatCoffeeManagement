@@ -40,6 +40,7 @@
             dateTimePickerBookingDate.Name = "dateTimePickerBookingDate";
             dateTimePickerBookingDate.Size = new Size(200, 27);
             dateTimePickerBookingDate.TabIndex = 0;
+            dateTimePickerBookingDate.ValueChanged += dateTimePickerBookingDate_ValueChanged;
             // 
             // comboBoxStartTime
             // 
@@ -103,6 +104,7 @@
             dataGridViewItems.Size = new Size(348, 195);
             dataGridViewItems.TabIndex = 6;
             dataGridViewItems.CellClick += DataGridViewItem_CellClick;
+            dataGridViewItems.CellContentClick += dataGridViewItems_CellContentClick;
             // 
             // BookingForm
             // 
